@@ -27,7 +27,7 @@
         <ul>
           <li>Ton profil (âge, taille, poids, objectif, préférences) reste <strong>sur ton téléphone</strong>. Nous n’y avons pas accès.</li>
           <li>Pas de compte, pas d’abonnement, pas d’achat, pas de publicité, pas de mesure d’audience.</li>
-          <li>Si tu l’autorises, ta position est envoyée <strong>sur le moment</strong> à un service public de cartes (OpenStreetMap) pour trouver les restaurants autour de toi. FitResto ne la garde pas.</li>
+          <li>Si tu l’autorises, ta position sert à trouver les restaurants autour de toi. La recherche se fait <strong>sur ton téléphone</strong>, dans une liste de restaurants intégrée à l’appli : ta position n’est envoyée nulle part et FitResto ne la garde pas.</li>
           <li>Tu effaces tout avec <span class="bouton">Effacer mon profil</span> dans l’onglet Profil.</li>
         </ul>
       </section>
@@ -47,7 +47,7 @@
               <tr><td data-label="Donnée">Cibles du jour que tu modifies</td><td data-label="Où elle est">Sur ton téléphone uniquement</td><td data-label="À quoi elle sert">Adapter le classement à tes besoins</td></tr>
               <tr><td data-label="Donnée">Préférences : végétarien, sans porc, halal, allergènes exclus</td><td data-label="Où elle est">Sur ton téléphone uniquement</td><td data-label="À quoi elle sert">Écarter les plats qui ne te conviennent pas</td></tr>
               <tr><td data-label="Donnée">Enseignes préférées, plats aimés, favoris, réponses au questionnaire de départ (fréquence de tes sorties au restaurant, difficultés, façon dont tu as connu l’appli)</td><td data-label="Où elle est">Sur ton téléphone uniquement</td><td data-label="À quoi elle sert">Personnaliser l’affichage</td></tr>
-              <tr><td data-label="Donnée">Position approximative (si tu l’autorises)</td><td data-label="Où elle est">Lue sur le moment, envoyée à un serveur OpenStreetMap Overpass, jamais enregistrée par FitResto</td><td data-label="À quoi elle sert">Trouver les restaurants dans un rayon d’environ 3 km</td></tr>
+              <tr><td data-label="Donnée">Position approximative (si tu l’autorises)</td><td data-label="Où elle est">Lue sur le moment et utilisée uniquement sur ton téléphone : jamais envoyée, jamais enregistrée</td><td data-label="À quoi elle sert">Trouver les restaurants des enseignes dans un rayon de 3 km (10 km s’il n’y en a aucun)</td></tr>
             </tbody>
           </table>
         </div>
@@ -65,13 +65,9 @@
       </section>
       <section>
         <h2>Services tiers et destinataires</h2>
-        <h3>OpenStreetMap (serveurs Overpass) : seulement si tu autorises la position</h3>
-        <p>Pour trouver les restaurants proches, FitResto envoie à un serveur public Overpass la position de ton téléphone (latitude et longitude) et le rayon de recherche. Comme pour toute connexion à Internet, ce serveur reçoit aussi l’adresse IP de ton téléphone. Aucune autre information (ni profil, ni identifiant) n’est envoyée. FitResto interroge d’abord le serveur principal ; s’il ne répond pas, elle essaie les serveurs de secours, dans cet ordre :</p>
-        <ul>
-          <li><strong>overpass-api.de</strong> : serveur principal de la communauté OpenStreetMap, situé en Allemagne ;</li>
-          <li><strong>overpass.private.coffee</strong> : serveur communautaire de secours ;</li>
-        </ul>
-        <p>Ces services sont gérés par des tiers indépendants. Ils peuvent garder des journaux techniques (adresse IP, requête) selon leurs propres règles. Nous ne recevons rien de leur part. Les données des restaurants proviennent d’OpenStreetMap © les contributeurs d’OpenStreetMap, sous licence ODbL.</p>
+        <h3>Restaurants proches : aucun service tiers</h3>
+        <p>La liste des restaurants des enseignes (nom de l’enseigne, emplacement, ville) est intégrée à l’appli. Pour trouver les restaurants proches, FitResto compare ta position à cette liste <strong>directement sur ton téléphone</strong>, sans connexion à Internet : ta position n’est envoyée à aucun serveur, ni au nôtre, ni à celui d’un tiers.</p>
+        <p>Cette liste est extraite d’OpenStreetMap © les contributeurs d’OpenStreetMap, sous licence ODbL (Open Database License). La base extraite est disponible librement, sous la même licence : <a href="restaurants-osm.json">restaurants-osm.json</a> (<a href="https://github.com/vincentdrill-code/applis/tree/main/fitresto">explications</a>).</p>
         <h3>Liens vers les sites des enseignes</h3>
         <p>Quand tu touches le lien « source » d’une enseigne, la page s’ouvre dans ton navigateur. Le site de l’enseigne applique alors sa propre politique de confidentialité.</p>
         <h3>Apple et Google</h3>
